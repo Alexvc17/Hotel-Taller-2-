@@ -5,12 +5,12 @@
 
 <br>
 <div class="text-center">
-<h1 class="display-5"><u>Lista de Habitaciones</u></h1>
+<h1 class="display-5"><u>Lista de clientes con habitacion 1 y 2</u></h1>
 </div>
 <br>
 <div class="container">
   <div class="row">
-  @foreach($habitaciones as $h)
+  @foreach($habitaciones as $r)
     <div class="col-md-4">
     
                 <!-- Card Dark -->
@@ -18,7 +18,7 @@
 
 <!-- Card image -->
 <div class="view overlay">
-  <img class="card-img-top" src='{{url("imagenes/$h->foto")}}'
+  <img class="card-img-top" src='{{url("imagenes/$r->foto")}}'
     alt="Card image cap">
   <a>
     <div class="mask rgba-white-slight"></div>
@@ -31,13 +31,15 @@
   
   
   <!-- Title -->
-  <h4 class="card-title">{{$h->Numero}}: {{$h->Tipo}}</h4>
-  <hr class="hr-light">
+  
+  
   <!-- Text -->
-  <p class="card-text white-text mb-4">Descripcion: {{$h->descripcion}}</p>
-  <p class="card-text white-text mb-4">Num Camas: {{$h->numCamas}}</p>
-  <p class="card-text white-text mb-4">Precio: {{$h->precio}}</p>
+  <p class="card-text white-text mb-4">Nombre: {{$r->nombres}}</p>
+  <p class="card-text white-text mb-4">Tipo: {{$r->Tipo}}</p>
+  <p class="card-text white-text mb-4">Precio: {{$r->precio}}</p>
   <!-- Link -->
+  
+  
  
 
 </div>
